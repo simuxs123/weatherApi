@@ -1,0 +1,256 @@
+{
+    "forecastTimestamps": [
+    {
+    "forecastTimeUtc": "2020-10-14 14:00:00",
+    "airTemperature": 8.3 
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 15:00:00",
+    "airTemperature": 8.1
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 16:00:00",
+    "airTemperature": 8.3
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 17:00:00",
+    "airTemperature": 8.3
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 18:00:00",
+    "airTemperature": 8.3
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 19:00:00",
+    "airTemperature": 8.4
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 20:00:00",
+    "airTemperature": 8.2
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 21:00:00",
+    "airTemperature": 8.2
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 22:00:00",
+    "airTemperature": 8.2
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 23:00:00",
+    "airTemperature": 8.1
+    },
+    {
+    "forecastTimeUtc": "2020-10-14 00:00:00",
+    "airTemperature": 8
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 01:00:00",
+    "airTemperature": 7.9
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 02:00:00",
+    "airTemperature": 7.9
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 03:00:00",
+    "airTemperature": 7.9
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 04:00:00",
+    "airTemperature": 7.9
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 05:00:00",
+    "airTemperature": 8.1
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 06:00:00",
+    "airTemperature": 8.4
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 07:00:00",
+    "airTemperature": 8.5
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 08:00:00",
+    "airTemperature": 8.7
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 09:00:00",
+    "airTemperature": 9.1
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 10:00:00",
+    "airTemperature": 9.3
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 11:00:00",
+    "airTemperature": 9.4
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 12:00:00",
+    "airTemperature": 9.5
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 13:00:00",
+    "airTemperature": 9.6
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 14:00:00",
+    "airTemperature": 9.7
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 15:00:00",
+    "airTemperature": 9.8
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 16:00:00",
+    "airTemperature": 10
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 17:00:00",
+    "airTemperature": 10
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 18:00:00",
+    "airTemperature": 10.1
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 19:00:00",
+    "airTemperature": 10
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 20:00:00",
+    "airTemperature": 10
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 21:00:00",
+    "airTemperature": 8.7
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 22:00:00",
+    "airTemperature": 8.1
+    },
+    {
+    "forecastTimeUtc": "2020-10-15 23:00:00",
+    "airTemperature": 7.7
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 00:00:00",
+    "airTemperature": 7.5
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 01:00:00",
+    "airTemperature": 7.6
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 02:00:00",
+    "airTemperature": 7.2
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 03:00:00",
+    "airTemperature": 6.8
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 04:00:00",
+    "airTemperature": 6.5
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 05:00:00",
+    "airTemperature": 6.2
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 06:00:00",
+    "airTemperature": 5.8
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 07:00:00",
+    "airTemperature": 5.7
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 08:00:00",
+    "airTemperature": 6.2
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 09:00:00",
+    "airTemperature": 7
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 10:00:00",
+    "airTemperature": 8.4
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 11:00:00",
+    "airTemperature": 9.5
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 12:00:00",
+    "airTemperature": 10.1
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 13:00:00",
+    "airTemperature": 10
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 14:00:00",
+    "airTemperature": 10
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 15:00:00",
+    "airTemperature": 9.7
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 16:00:00",
+    "airTemperature": 8.4
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 17:00:00",
+    "airTemperature": 7.8
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 18:00:00",
+    "airTemperature": 7.4
+    },
+    {
+    "forecastTimeUtc": "2020-10-16 21:00:00",
+    "airTemperature": 7.7
+    },
+    {
+    "forecastTimeUtc": "2020-10-17 00:00:00",
+    "airTemperature": 7.4
+    },
+    {
+    "forecastTimeUtc": "2020-10-17 03:00:00",
+    "airTemperature": 5.3
+    },
+    {
+    "forecastTimeUtc": "2020-10-17 06:00:00",
+    "airTemperature": 5.9
+    },
+    {
+    "forecastTimeUtc": "2020-10-17 09:00:00",
+    "airTemperature": 7.4
+    },
+    {
+    "forecastTimeUtc": "2020-10-17 12:00:00",
+    "airTemperature": 8.4
+    },
+    {
+    "forecastTimeUtc": "2020-10-17 15:00:00",
+    "airTemperature": 7
+    },
+    {
+    "forecastTimeUtc": "2020-10-17 18:00:00",
+    "airTemperature": 6
+    },
+    {
+    "forecastTimeUtc": "2020-10-17 21:00:00",
+    "airTemperature": 4.5
+    },
+    {
+    "forecastTimeUtc": "2020-10-18 00:00:00",
+    "airTemperature": 3.6
+    }
+    ]
+    }
