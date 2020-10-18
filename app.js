@@ -30,22 +30,13 @@ function main(){
 }
 async function apiWeather (){
     try{
-    let dienos,
-        data=new Date(),
-        k=0,
-        response=await fetch("https://cors-anywhere.herokuapp.com/https://api.meteo.lt/v1/places/"+miestas.textContent+"/forecasts/long-term"),
+    let response=await fetch("https://cors-anywhere.herokuapp.com/https://api.meteo.lt/v1/places/"+miestas.textContent+"/forecasts/long-term"),
         datas= await response.json();
-        if(!datas.error){
         naujasMasyvas(datas.forecastTimestamps);
         mygtukaiIrListas();
-        } else {
-            alert("Tokios miesto sitemoje nera");
-            miestas.textContent="Kaunas";
-            apiWeather();
-        }
     }
     catch(error){
-        alert(error);
+        console.log(error);
     }
 }
 
@@ -69,23 +60,24 @@ function naujasMasyvas(info){ //susikuriu nauja masyva kiekvienos dienos su duom
     let newArr, 
         kiek=info.length, 
         k=0,
-        dienos,
-        data=new Date();
-    found = info.map(function(e) { //surandu nuo kurios valandos rodyti siandienine temp
+        naujData,
+        dabarData = moment().format().replace(/T/," "),
+        found = info.map(function(e) { //surandu nuo kurios valandos rodyti siandienine temp
         return e.forecastTimeUtc 
-        }).indexOf(data.toLocaleDateString()+" "+data.toLocaleTimeString().substring(0,2)+":00:00"); 
+        }).indexOf(dabarData.substring(0,13)+":00:00"); 
      for(let j=found;j<kiek;j+=k){
          newArr=new Array();
          k=0;
-     for(let i=0; i<24 && kiek!==j+k; i++){
-        dienos=new Date(info[j+k].forecastTimeUtc) ;       
-        if(dienos.getHours()===i ){
+     for(let i=0; i<24 && kiek!==j+k; i++){       
+        naujData = moment(info[j+k].forecastTimeUtc, "YYYY-MM-DD HH:mm:ss").toDate();     
+        if(naujData.getHours()===i ){
             newArr.push(info[j+k]);
             k++;
         }
    }   
    sepArr.push(newArr);
-}}
+}
+}
 function resetBut() { //resetinu mygtuku duomenis kai pasirenku kita miesta
     sepArr=[];
     let span = document.querySelectorAll(".keisti");
@@ -105,7 +97,7 @@ function dienuMygtukuInfo(el,i) { //visa informacija ant mygtuku
         img,
         did=Math.max.apply(Math, el.map(function(o) { return o.airTemperature; })), //didziausia ir maziausia tos dienos temperatura
         maz=Math.min.apply(Math, el.map(function(o) { return o.airTemperature; })),
-        dienos=new Date(el[0].forecastTimeUtc);
+        naujData = moment(el[0].forecastTimeUtc, "YYYY-MM-DD HH:mm:ss").toDate();
     if(i===0){
         span=document.createElement("SPAN");
         span.className="dien keisti";
@@ -113,7 +105,7 @@ function dienuMygtukuInfo(el,i) { //visa informacija ant mygtuku
     } else {
         span=document.createElement("SPAN");
         span.className="dien keisti";
-        span.textContent=dienos.toDateString().substring(0,4)+" "+dienos.getDate()+"th";
+        span.textContent=naujData.toDateString().substring(0,4)+" "+naujData.getDate()+"th";
     }
         days[i].appendChild(span);
         span=document.createElement("SPAN");
@@ -134,12 +126,13 @@ function dienuMygtukuInfo(el,i) { //visa informacija ant mygtuku
 function createTableTrAndTd(info){ //Kai kurie veiksmai pries sukuriant valandine oru prognozes eilute
     let tr, 
         td,
-        text;
+        text,
+        naujData;
     for(let j=0; j<info.length;j++){
-        dienos=new Date(info[j].forecastTimeUtc);
-        if(dienos.getHours()>=20 || dienos.getHours()>=0&&dienos.getHours()<=6) //diena ar naktis
-            arr=[dienos.toLocaleTimeString().substring(0,2),whatDay(info[j].conditionCode,true),info[j].airTemperature.toFixed(),info[j].windSpeed,info[j].totalPrecipitation];
-        else arr=[dienos.toLocaleTimeString().substring(0,2),whatDay(info[j].conditionCode,false),info[j].airTemperature.toFixed(),info[j].windSpeed,info[j].totalPrecipitation];
+        naujData = moment(info[j].forecastTimeUtc, "YYYY-MM-DD HH:mm:ss").toDate();;
+        if(naujData.getHours()>=20 || naujData.getHours()>=0&&naujData.getHours()<=6) //diena ar naktis
+            arr=[naujData.toLocaleTimeString().substring(0,2),whatDay(info[j].conditionCode,true),info[j].airTemperature.toFixed(),info[j].windSpeed,info[j].totalPrecipitation];
+        else arr=[naujData.toLocaleTimeString().substring(0,2),whatDay(info[j].conditionCode,false),info[j].airTemperature.toFixed(),info[j].windSpeed,info[j].totalPrecipitation];
         arr2=[":00","","°","km/h","mm/val"];       
         createTdForTr(arr,arr2)
         document.querySelectorAll(".fa-long-arrow-alt-up")[j].style.transform = "rotate("+info[j].windDirection+"deg)";
