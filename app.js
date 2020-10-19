@@ -32,8 +32,15 @@ async function apiWeather (){
     try{
     let response=await fetch("https://cors-anywhere.herokuapp.com/https://api.meteo.lt/v1/places/"+miestas.textContent+"/forecasts/long-term"),
         datas= await response.json();
+        if(!datas.error){
         naujasMasyvas(datas.forecastTimestamps);
         mygtukaiIrListas();
+        }
+        else {
+            alert("Tokio miesto nera sistemoje");
+            miestas.textContent="Kaunas";
+            apiWeather();
+        }
     }
     catch(error){
         console.log(error);
