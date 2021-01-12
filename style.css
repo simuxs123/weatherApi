@@ -68,7 +68,7 @@ span{
     padding: 10px 15px;
 }
 #days .nav-link {
-    width: 105px;
+    width: 110px;
     height: 110px;
     align-self: flex-end;
     background-color: white;
@@ -82,8 +82,10 @@ span{
     width: 100%;
 }
 .dienTemp {
-    margin-left: 25px;
-    width: 13%;  
+    margin-left: 13px;
+    margin-right:5px;
+    width: 20%;  
+    text-align:right;
 }
 .condition {
     display: none;
@@ -111,11 +113,11 @@ span{
         padding: 10px 3px;
     }
     #days .nav-link.active img {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
     #days .nav-link.active .condition {
-        width: 95px;
+        width: 81px;
     }
     img{
         width: 35px;
@@ -127,6 +129,7 @@ span{
     }
     .dienTemp {
         margin-left: 10px;
+        width:25%;
     }
     .navbar .form-inline {
         width: 75%;
